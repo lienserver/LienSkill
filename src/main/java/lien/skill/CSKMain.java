@@ -9,6 +9,7 @@ import com.gnurung.gunucommandmodule.module.CommandProcesser;
 
 import lien.skill.command.CSkillCommand;
 import lien.skill.command.parameter.InventoryModeType;
+import lien.skill.command.parameter.SimpleBooleanType;
 import lien.skill.data.SlotData;
 
 
@@ -31,6 +32,7 @@ public class CSKMain extends JavaPlugin {
     {
         commandprocesser = new CommandProcesser(CSKMain.class,CSkillCommand.class);
         commandprocesser.addParameter(new InventoryModeType());
+        commandprocesser.addParameter(new SimpleBooleanType("skillbooktype", "특수", "일반"));
     }
 
     @Override
